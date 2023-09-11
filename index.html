@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados com JS</title>
+    <style>
+        body { font: 12pt Arial; }
+        h1 {color: green;}
+        button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h2>Trabalhando com Dados</h2>
+    <button onclick="inicio()">Clique para começar</button>
+
+    <section id="resultado">
+        <p>Aqui vai aparecer o resultado... </p>
+    </section>
+
+    <section id="resultado2">
+        <p>Aqui vai aparecer o resultado2... </p>
+    </section>
+
+    <script>
+        function inicio(){
+            let nome = window.prompt('Qual é o seu nome?')
+            let resNome = window.document.getElementById('resultado')
+            var mes = parseInt(prompt('Qual é o seu mês?'))
+            var resMes = window.document.getElementById('resultado2')
+            // Também funciona com o comando abaixo
+            // let res = window.document.querySelector('section#resultado')
+            let msgMes;
+
+            if(mes==1){
+                mes = "janeiro"
+                msgMes = "Viva hoje enquanto está vivo."
+            }
+            if(mes==2){
+                mes = "fevereiro"
+                msgMes = "Não deixe que seus sonhos sejam apenas sonhos."
+            }
+            if(mes==3){
+                mes = "março"
+                msgMes = "Nunca desista daquilo que te faz sorrir com sinceridade."
+            }
+            if(mes==4){
+                mes = "abril"
+                msgMes = "Se recarregue sempre com boas energias."
+            }
+            if(mes==5){
+                mes = "maio"
+                msgMes = "Se você não está feliz com algo, mexa-se. Você não é uma árvore."
+            }
+            if(mes==6){
+                mes = "junho"
+                msgMes = "Não olho para trás porque não estou indo para lá."
+            }
+            if(mes==7){
+                mes = "julho"
+                msgMes = "Não deixe a maldade do mundo endurecer seu coração e tirar o melhor de você."
+            }
+            if(mes==8){
+                mes = "agosto"
+                msgMes = " Não deixe que seus sonhos sejam apenas sonhos."
+            }
+            if(mes==9){
+                mes = "setembro"
+                msgMes = "Apaixone-se pelo processo de se tornar a sua melhor versão."
+            }
+            if(mes==10){
+                mes = "outubro"
+                msgMes = "Entrego, confio, aceito e agradeço."
+            }
+            if(mes==11){
+                mes = "novenbro"
+                msgMes = " Sou grata pelo que já recebi, pelo que estou recebendo e pelo que eu ainda nem sei que vou receber."
+            }
+            if(mes==12){
+                mes = "dezenbro"
+                msgMes = "Para realizar grandes coisas, não tenha vergonha de começar pequeno."
+            }
+
+            resNome.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um grande prazer te conhecer! &#128511;`
+            resMes.innerHTML = `<p><strong>${nome}</strong>, tenho uma mensagem para você que nasceu em <strong>${mes}</strong>: <p><h1>${msgMes}</h1>`
+        }
+    </script>
+</body>
+</html>
